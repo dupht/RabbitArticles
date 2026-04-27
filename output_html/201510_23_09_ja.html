@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>あなたのうさぎ、保険は入ってる？　1000人超のペットオーナー調査から見えてきた現実 — うさぎ科学ニュース</title>
+  <meta name="description" content="あなたのうさぎ、保険は入ってる？　1000人超のペットオーナー調査から見えてきた現実" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>あなたのうさぎ、保険は入ってる？　1000人超のペットオーナー調査から見えてきた現実</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">あなたのうさぎ、保険は入ってる？　1000人超のペットオーナー調査から見えてきた現実</h1>
+<p class="lead-p">うさぎを飼っている人の約4人に3人は、ペット保険に未加入——そんな驚きの実態が、1,000人超のうさぎオーナーを対象にしたインターネット調査で明らかになりました。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>ウサギはイヌやネコに次いで人気の小動物ペットですが、<strong>オーナーの実態に関するデータはほとんど存在しませんでした</strong>。病気になったとき、怪我をしたとき、そのときオーナーは本当に備えができているのでしょうか？　この調査はその「見えていなかった現実」に光を当てることを目的に行われました。</p>
+<p>研究チームは2014年11月に、FacebookやTwitter、うさぎ専門フォーラムを通じて調査票を公開。わずか2週間で1,183件の回答が集まりました。</p>
+<h2>研究でわかったこと</h2>
+<h3>うさぎの「備え」の現状</h3>
+<ul>
+<li><strong>73.9%（867人/1,174人）がペット保険に未加入</strong>。うさぎは保険なしで飼われていることが多いのが現実のようです。</li>
+<li><strong>78.3%（919人/1,173人）のうさぎがマイクロチップ未装着</strong>。マイクロチップ（迷子や身元確認に役立つ小型ICチップ）が入っているのは5頭に1頭未満でした。</li>
+<li>ただし、<strong>保護センター（rescue centre）から引き取ったうさぎのオーナーは、保険加入率が33.2%と比較的高め</strong>でした。</li>
+</ul>
+<h3>どこでうさぎを手に入れた？</h3>
+<ul>
+<li><strong>29.1%が保護センター（レスキュー）から引き取り</strong>。うさぎを「捨てる」人がいる一方で、里親として引き取る人も相当数いることがわかります。</li>
+</ul>
+<h3>オーナーの実態</h3>
+<ul>
+<li><strong>平均2.6頭（標準偏差±1.8）のうさぎを飼育</strong>。1頭だけでなく複数头飼いのオーナーが多く、44.9%が2頭飼っていました。</li>
+<li>回答者の67.9%がイングランド在住で、18〜64歳の幅広い年齢層に分布。</li>
+</ul>
+<h3>動物福祉法への意識</h3>
+<ul>
+<li><strong>「動物の福祉に関する法律がじゅうぶんに周知されていない」と感じているオーナーが多数派</strong>でした。うさぎの法的保護については、まだまだ情報が届きにくい状況が続いているようです。</li>
+</ul>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<ul class="hint-list">
+<li><strong>ペット保険</strong>は万一のときのセーフティネット。うさぎの医療費は予想以上に高額になることもあり、加入を検討してみる価値はあります。</li>
+<li><strong>マイクロチップ</strong>は逃げてしまったときや災害時に身元証明として役立ちます。日本でも装着できる動物病院があります。詳しくは<strong>かかりつけの獣医師</strong>にご相談ください。</li>
+<li>うさぎを迎えるときは、ぜひ<strong>保護センターや里親募集</strong>も選択肢に入れてみてください。</li>
+</ul>
+<h2>まとめ</h2>
+<p>1,000人以上のうさぎオーナーへの調査は、保険・マイクロチップ装着率の低さという課題を浮き彫りにしました。うさぎのための「もしも」の備えを、今一度見直してみましょう。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: World Rabbit Science, Vol.23, No.4, 2015（pp.289–293）</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>

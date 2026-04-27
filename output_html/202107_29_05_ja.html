@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>うさぎの腸を荒らす寄生虫「エイメリア・マグナ」の正体に迫る — うさぎ科学ニュース</title>
+  <meta name="description" content="うさぎの腸を荒らす寄生虫「エイメリア・マグナ」の正体に迫る" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>うさぎの腸を荒らす寄生虫「エイメリア・マグナ」の正体に迫る</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">うさぎの腸を荒らす寄生虫「エイメリア・マグナ」の正体に迫る</h1>
+<p class="lead-p">「コクシジウム症（こくしじうむしょう）」という病気を聞いたことはありますか？うさぎでは非常に一般的な寄生虫感染症で、特に離乳後から生後4か月頃の若いうさぎに多く見られます。今回紹介する研究は、その原因となる寄生虫のひとつ「エイメリア・マグナ」が腸にどんなダメージを与えるか、そして将来のワクチン開発に向けた手がかりを中国の研究チームが明らかにしたものです。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>コクシジウム（coccidia；消化管に寄生する原虫）はうさぎに感染するとさまざまな症状を引き起こし、養兎産業に大きな経済的損失を与えます。<strong>エイメリア・マグナ（Eimeria magna）</strong>は小腸（空腸・回腸）に寄生する病原性の高い種で、下痢・食欲不振・体重減少を引き起こします。</p>
+<p>この寄生虫の腸内での変化を「免疫組織化学的染色法（IHC；抗体を使って特定の物質を組織内で可視化する手法）」を用いて調べた研究はほぼ存在せず、今回が初めての試みとなります。さらに、別種の<strong>エイメリア・インテスティナリス（E. intestinalis）</strong>の抗体がE. magnrを認識できるかも調べており、ワクチン開発への示唆を含んでいます。</p>
+<h2>研究でわかったこと</h2>
+<p>生後28日齢・離乳済みのうさぎ45頭を3グループに分けました。</p>
+<ul>
+<li><strong>グループA（感染群）</strong>：E. magnra 2万個のオーシスト（感染性の卵のようなもの）を経口投与</li>
+<li><strong>グループB（血清作製用）</strong>：E. intestinalis 3000個を投与し、後の免疫組織化学用の血清を作製</li>
+<li><strong>グループC（対照群）</strong>：生理食塩水のみ投与</li>
+</ul>
+<p>感染後7日目に一部を解剖し、小腸の組織を採取して病理標本を作製しました。</p>
+<h3>小腸の組織変化</h3>
+<ul>
+<li><strong>十二指腸</strong>：感染群・対照群ともに構造はほぼ正常。寄生虫は確認されなかった。</li>
+<li><strong>空腸</strong>：感染群では腸上皮細胞が多数のE. magnrに占拠され、<strong>腸絨毛（消化吸収の突起）が脱落・崩壊</strong>。粘膜下層に出血スポットと炎症細胞の浸潤が見られた。</li>
+<li><strong>回腸</strong>：空腸より広範囲にわたってE. magnrが認められ、<strong>絨毛の萎縮・融合・脱落</strong>が起きていた。腸腺の首部にも多数の寄生虫が確認された。</li>
+</ul>
+<h3>血液検査の変化</h3>
+<p>感染後7日目の検査で、感染群では対照群と比べて以下の有意な変化がありました（いずれもP<0.01）：</p>
+<ul>
+<li><strong>低下</strong>：赤血球数（-30.7%）、ヘモグロビン量（-32.2%）、ヘマトクリット値（-35.8%）、リンパ球比率（-44.9%）</li>
+<li><strong>上昇</strong>：白血球数（+54.6%）、好中球比率（+35.4%）</li>
+</ul>
+<p>絨毛の破壊による出血が赤血球の減少につながり、炎症に対する免疫細胞の動員が白血球の増加を招いたと考えられます。</p>
+<h3>体重の変化</h3>
+<p>感染後5〜9日目にかけて感染群は体重が減少し、9日目以降はゆっくり回復しはじめました。対照群はこの間ずっと体重増加を続けていました。</p>
+<h3>免疫組織化学染色：2種の抗体が同じ場所を認識</h3>
+<p>E. magnaの抗原（体の免疫が反応するタンパク質などの物質）は空腸・回腸の絨毛上皮細胞に確認されました。そして<strong>E. intestinalis用の血清（抗体）でも、E. magnaと同じ部位が染色された</strong>ことがわかりました。これは2つの種が「共通の抗原決定基」を持つことを示唆しており、両方に有効な混合ワクチンの開発につながる可能性があります。</p>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<ul class="hint-list">
+<li>コクシジウム症は離乳直後の若いうさぎが最もかかりやすい病気のひとつです。購入後や譲渡後の健康チェックで<strong>糞便検査</strong>を受けることを推奨します。</li>
+<li>症状（水様性の下痢・食欲不振・元気消失）が見られたら、早めに<strong>獣医師に相談</strong>してください。</li>
+<li>飼育環境の清潔を保つことが感染予防の基本です。オーシストは糞便を通じて広がるため、まめな糞の処理と消毒が大切です。</li>
+</ul>
+<h2>まとめ</h2>
+<p>エイメリア・マグナは空腸・回腸の絨毛を破壊し、炎症・貧血傾向・体重減少を引き起こすことが病理学的に確認されました。また、E. intestinalis用の血清がE. magnrの抗原を認識できたことは、2種に共通するワクチン候補となる抗原の探索に向けた重要な第一歩となります。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: World Rabbit Science, Vol.29, No.3, 2021年 (pp. 183-192)</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>

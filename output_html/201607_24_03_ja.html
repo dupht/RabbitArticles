@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>うさぎの腸活に酵母は効く？サッカロマイセス・セレビシエを試した研究 — うさぎ科学ニュース</title>
+  <meta name="description" content="うさぎの腸活に酵母は効く？サッカロマイセス・セレビシエを試した研究" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>うさぎの腸活に酵母は効く？サッカロマイセス・セレビシエを試した研究</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">うさぎの腸活に酵母は効く？サッカロマイセス・セレビシエを試した研究</h1>
+<p class="lead-p">ヒトの健康ブームで「腸活」が流行っていますが、うさぎにも腸内環境はとても重要。特に離乳期の子うさぎは消化器系の病気にかかりやすく、抗生物質に頼らない対策が求められています。そこで注目されたのが<strong>酵母（こうぼ）</strong>です。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>家畜の飼育では長年、腸内環境を整えるために抗生物質が使われてきました。しかしお肉への残留や細菌の薬剤耐性の問題から、代替手段の開発が急がれています。その候補として、発酵食品でもおなじみの<strong>サッカロマイセス・セレビシエ（パン酵母やビール酵母として知られる菌）</strong>が研究されています。</p>
+<p>今回のハンガリー・チュニジアの共同研究では、成長期のうさぎ90羽を使い、この酵母を飼料に添加したときの効果を詳細に調べました。</p>
+<h2>研究でわかったこと</h2>
+<h3>実験のデザイン</h3>
+<p>90羽のうさぎを3グループに分けて実験しました。</p>
+<ul>
+<li><strong>CCグループ</strong>：酵母なしの通常飼料</li>
+<li><strong>CTグループ</strong>：離乳後（35日齢）から酵母添加飼料</li>
+<li><strong>TTグループ</strong>：生後17日齢から（お母さんうさぎの飼料経由で）酵母摂取</li>
+</ul>
+<p>飼料1kgあたり約65億個（6.5×10⁹ CFU）の生きた酵母を添加しました。</p>
+<h3>成長への影響</h3>
+<p>全体的な体重増加や飼料摂取量には<strong>グループ間で有意な差はありませんでした</strong>。</p>
+<p>ただし、<strong>離乳後最初の1週間だけは</strong>、TTグループ（早い時期から酵母を摂った子うさぎ）の体重増加が他のグループよりわずかに高くなりました（1日あたり48.1g対43.9〜44.2g）。この時期の飼料摂取量も増える傾向がありました。</p>
+<h3>腸内細菌への影響</h3>
+<p>盲腸（うさぎの腸の一部で、発酵槽のような役割を果たす器官）の細菌構成を調べたところ、離乳後42日目に<strong>嫌気性菌やバクテロイデス（腸内の善玉菌の一種）</strong>が酵母添加グループで若干多く見られました。ただし、この変化は一時的で、77日目には差がなくなりました。</p>
+<h3>免疫・血液への影響</h3>
+<p>血液検査や免疫パラメーター（IgG抗体、IL-2、IFN-γなどのサイトカイン）については、<strong>グループ間で差はありませんでした</strong>。</p>
+<h3>研究の限界</h3>
+<ul>
+<li>実験は衛生管理の良い環境で行われたため、不衛生な条件下での効果は不明</li>
+<li>離乳直後の短期的な体重増加は観察されたが、長期的な効果は限定的</li>
+</ul>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<p class="hint-p">この研究の酵母は産業用の肥育うさぎ向けの研究ですが、腸内環境に関するヒントはペットうさぎにも参考になります。</p>
+<ul class="hint-list">
+<li>うさぎの腸内細菌（特に盲腸内の細菌）は消化と健康に非常に重要です</li>
+<li><strong>離乳期（生後4〜6週頃）は腸内環境が特に不安定になりやすい時期</strong>です</li>
+<li>この時期の食事管理や環境ストレスの軽減は大切です</li>
+</ul>
+<p class="hint-p">プロバイオティクス（腸に良い生きた菌）の効果は衛生状態や個体差によって変わるため、使用を検討する場合は必ず獣医師にご相談ください。</p>
+<h2>まとめ</h2>
+<p>酵母サッカロマイセス・セレビシエの添加は、うさぎの成長全体や免疫機能への大きな影響は確認されませんでしたが、離乳直後の短期的な体重増加と腸内細菌への一時的な変化が観察されました。衛生的な環境では限定的な効果しか期待できない可能性があります。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: Belhassen T. et al., World Rabbit Science, Vol.24, 2016（pp.191-200）</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>

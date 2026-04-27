@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>うさぎのコクシジウムとピン虫——季節で感染率が変わる！ハンガリー大規模農場4年間の追跡データ — うさぎ科学ニュース</title>
+  <meta name="description" content="うさぎのコクシジウムとピン虫——季節で感染率が変わる！ハンガリー大規模農場4年間の追跡データ" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>うさぎのコクシジウムとピン虫——季節で感染率が変わる！ハンガリー大規模農場4年間の追跡データ</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">うさぎのコクシジウムとピン虫——季節で感染率が変わる！ハンガリー大規模農場4年間の追跡データ</h1>
+<p class="lead-p">あなたのうさぎのお腹の中には、今も寄生虫がいるかもしれません。でも、それが元気に暮らせているなら、必ずしも大問題ではないかもしれない——ハンガリーとスロバキアの大規模農場から4年分のデータが、うさぎの寄生虫感染の「季節リズム」を明らかにしました。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>うさぎの消化器疾患の原因のひとつが<strong>寄生虫感染</strong>です。特に多いのが2種類です：</p>
+<ul>
+<li><strong>コクシジウム（イメリア属：Eimeria spp.）</strong>：腸や肝臓に寄生する原虫（ごく小さな単細胞生物）で、下痢や体重減少を引き起こす。特に離乳後の子うさぎに危険</li>
+<li><strong>ウサギキョウ虫（Passalurus ambiguus）</strong>：うさぎに特有のピン虫（回虫の仲間）。軽度の感染では無症状のことも多いが、重感染では下痢・体重減少・神経症状・死亡の報告もある</li>
+</ul>
+<p>大規模農場（産業的ウサギ農場）での実態は、これまでほとんど調べられてきませんでした。この研究はハンガリー農業生命科学大学などのチームが、2018〜2022年の4年間にわたり、ハンガリー29農場・スロバキア2農場、合計7612検体の糞便を分析した大規模な疫学調査です。</p>
+<h2>研究でわかったこと</h2>
+<h3>コクシジウム（イメリア属）の感染状況</h3>
+<p>5723の糞便サンプルで検査した結果：</p>
+<ul>
+<li><strong>陰性（感染なし）：68.0%</strong></li>
+<li>低レベル感染：7.1%</li>
+<li>中〜高レベル感染：13.5%</li>
+<li>非常に高レベル感染：11.4%</li>
+</ul>
+<p>つまり全体の32%が陽性、うち約25%が高〜非常に高レベルの感染を示していました。なお既存文献（主に小規模・庭先農場の調査）には感染率48〜79%というデータもあり、今回の大規模農場は比較的良好な結果でした。</p>
+<h3>コクシジウムの季節による差</h3>
+<p>| 季節 | 陽性率 |</p>
+<p>|------|-------|</p>
+<p>| 春 | <strong>25.1%（最低・最良）</strong> |</p>
+<p>| 夏 | 35.3% |</p>
+<p>| 秋 | 36.2%（最高） |</p>
+<p>| 冬 | 29.5% |</p>
+<p>夏〜秋に感染率が高くなる傾向が統計的に有意でした（P<0.05）。これは温暖で湿気の多い環境下でオーシスト（虫の卵のような耐性形態）の生存・感染が促進される可能性を示唆しています。</p>
+<h3>ウサギキョウ虫（ピン虫）の感染状況</h3>
+<p>7612サンプル中：</p>
+<ul>
+<li><strong>陽性：4.4%（335検体）</strong></li>
+<li>幼虫のみ検出：1.9%</li>
+<li>卵のみ検出：3.5%</li>
+<li>両方検出：0.9%</li>
+</ul>
+<p>エジプトの報告（感染率45%）と比べると、今回の大規模農場の感染率は著しく低い結果でした。</p>
+<h3>ウサギキョウ虫の季節による差</h3>
+<p>| 季節 | 陽性率 |</p>
+<p>|------|-------|</p>
+<p>| 春 | 5.7%（比較的高め） |</p>
+<p>| 夏 | <strong>3.0%（最低）</strong> |</p>
+<p>| 秋 | 4.4% |</p>
+<p>| 冬 | 4.4% |</p>
+<p>コクシジウムとは逆に、ピン虫は<strong>夏に最も感染率が低くなる</strong>傾向がありました（P<0.05）。</p>
+<h3>年ごとの変動と防疫の効果</h3>
+<p>調査期間中、農場で厳格な予防措置を導入した直後は検査陽性率が改善しました。しかしその後再び感染率が上昇した年もあり、継続的な監視の重要性が示されました。</p>
+<h3>研究の限界</h3>
+<ul>
+<li>各農場内の個々のうさぎではなく「混合糞便サンプル」を使用（個体ごとの感染率は不明）</li>
+<li>ハンガリー・スロバキアに限定したデータであり、他の地域への適用には注意が必要</li>
+</ul>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<ul class="hint-list">
+<li><strong>コクシジウムはほぼすべてのうさぎ農場・家庭にいる</strong>と考えてよいでしょう。少量の感染なら、健康な成体うさぎは無症状のことが多いです</li>
+<li><strong>子うさぎ（離乳前後）は特に注意が必要</strong>です。この時期に環境衛生が悪いと重症化するリスクが高い</li>
+<li>ペットのうさぎでも、定期的な糞便検査（糞便浮遊法）でコクシジウムやピン虫の有無を確認できます（かかりつけの獣医師に相談しましょう）</li>
+<li><strong>暑い時期・梅雨の時期</strong>はコクシジウム感染が増えやすい可能性があります。この季節は特にケージや排泄物の衛生管理を徹底するとよいでしょう</li>
+<li>ピン虫に関しては自己感染の可能性があり（盲腸便を食べる際に再感染）、完全な排除が難しいとされています</li>
+</ul>
+<h2>まとめ</h2>
+<p>大規模農場においても、コクシジウムとピン虫は1年を通じて存在し、季節による感染率の変動があることが明らかになりました。定期的な糞便検査と季節に応じた予防管理が、農場・ペット問わずうさぎの健康維持の鍵になりそうです。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: World Rabbit Science, Vol. 31, 277-283, 2023</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>うさぎが鳴くとき、それは幸せ？苦痛？——声の分析でわかった意外な事実 — うさぎ科学ニュース</title>
+  <meta name="description" content="うさぎが鳴くとき、それは幸せ？苦痛？——声の分析でわかった意外な事実" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>うさぎが鳴くとき、それは幸せ？苦痛？——声の分析でわかった意外な事実</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">うさぎが鳴くとき、それは幸せ？苦痛？——声の分析でわかった意外な事実</h1>
+<p class="lead-p">うさぎは基本的に静かな生き物とされていますが、実はちゃんと声を出していることがあります。その声の「音響的な特徴」を解析することで、うさぎが気持ちよいときと不快なときを見分けられるかもしれません。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>動物が発する声は、その感情状態を知る手がかりになります。牛や豚ではすでに音響分析による福祉評価が進んでいますが、うさぎについてはほとんど研究がありませんでした。</p>
+<p>今回の研究は、うさぎにとって<strong>快適な状況（交尾）</strong>と<strong>不快な可能性がある状況（電気刺激による精子採取）</strong>それぞれで出す声を比較し、音の特徴から感情状態を読み取れるかを検証しました。メキシコとウルグアイの研究者チームによる動物福祉の観点からの研究です。</p>
+<h2>研究でわかったこと</h2>
+<h3>実験のしくみ</h3>
+<p>9匹の成熟したニュージーランドホワイト雄うさぎを対象に、3つの条件で声を記録しました：</p>
+<ul>
+<li><strong>交尾による射精（1回目・2回目）</strong>：発情中の雌と自然交尾させる</li>
+<li><strong>無麻酔下の電気的射精（EE）</strong>：直腸プローブで電気刺激する精子採取法</li>
+<li><strong>麻酔下のEE</strong>：ケタミン＋キシラジンで麻酔した状態でEE実施</li>
+</ul>
+<p>音響パラメーターとして、高周波数・低周波数・最大周波数・基本周波数・持続時間を測定しました。</p>
+<h3>結果：鳴く個体数と周波数が大きく違った</h3>
+<p><strong>交尾での発声 vs 電気的射精での発声：</strong></p>
+<ul>
+<li>交尾では<strong>9/9匹全員</strong>が声を出したが、電気的射精では<strong>4/9匹のみ</strong>（P=0.03）</li>
+<li>電気的射精での声は、<strong>すべての周波数パラメーターが交尾時より有意に高かった</strong>（P<0.01）</li>
+</ul>
+<p>- 高周波数：4.1 → 7.2 kHz</p>
+<p>- 基本周波数：0.37 → 1.83 kHz</p>
+<p>- 最大周波数：0.35 → 1.83 kHz</p>
+<p>つまり、苦痛・ストレスを伴う可能性がある電気的射精では<strong>より高い音（高周波）</strong>の声が出る傾向があります。これは他の動物（ヒツジ、ヤギ、シカなど）での研究と一致する結果です。</p>
+<p><strong>麻酔の有無による違いは？</strong></p>
+<p>麻酔あり・なしで、発声する個体数も周波数もほとんど変わりませんでした（有意差なし）。使用した麻酔薬（ケタミンとキシラジン）は、うさぎの発声を消すことも、特徴を変えることもしなかったようです。</p>
+<p><strong>交尾の1回目と2回目を比較すると？</strong></p>
+<ul>
+<li>発声する個体数や周波数に有意差はなかったが、<strong>基本周波数は2回目の射精で全個体が上昇</strong>（P=0.008）</li>
+</ul>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<ul class="hint-list">
+<li>うさぎは「静かだから平気」とは限りません。声を出さなくても不快・苦痛を感じている場合があります</li>
+<li>一方、高い音の声を出しているときは、何らかのストレスや不快感のサインである可能性があります</li>
+<li>今回の研究では電気的な刺激でも半数以上のうさぎが声を出さなかったことも示されており、うさぎは痛みや不快を声以外で表現する場合もあることに注意が必要です</li>
+<li>動物病院での処置などでうさぎが高い音で鳴くことがあれば、それは苦痛のサインかもしれません</li>
+</ul>
+<h2>まとめ</h2>
+<p>うさぎの声を音響分析することで、気持ちよい状況とそうでない状況を区別できる可能性が示されました。電気的射精では交尾より声の周波数が高く、これが苦痛を示すサインである可能性があります。麻酔はこの反応を消しませんでした。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: World Rabbit Science, Vol.27(3), 157-162, 2019</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>

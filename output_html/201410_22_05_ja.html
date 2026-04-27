@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>うさぎのケージを豊かにするなら、わら か 圧縮木材ブロック！─オランダの実験結果 — うさぎ科学ニュース</title>
+  <meta name="description" content="うさぎのケージを豊かにするなら、わら か 圧縮木材ブロック！─オランダの実験結果" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #fdfaf6;
+      color: #3a2e25;
+      line-height: 1.85;
+    }
+    a { color: #a0622a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── サイトヘッダー ── */
+    .site-header {
+      background: #5a3e28;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: #f4e8d1;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .site-header a:hover { color: #fff; text-decoration: none; }
+    .site-name {
+      color: #c4a882;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── 記事ヒーロー ── */
+    .article-hero {
+      background: linear-gradient(150deg, #fdf0e0 0%, #f0dfc8 45%, #e0cdb8 100%);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='3' fill='%23c4a882' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c98a4b, #a0622a, #c98a4b);
+    }
+    .hero-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px; height: 80px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(160,98,42,0.18);
+    }
+    .article-hero h1 {
+      font-size: clamp(1.3rem, 3.5vw, 1.95rem);
+      font-weight: 900;
+      color: #3d2b1a;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.55;
+      position: relative;
+    }
+    .hero-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #a0622a;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-wrs-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.7);
+      color: #7a5538;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid #d4b896;
+    }
+
+    /* ── 記事本文 ── */
+    .article-body {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 52px 24px 88px;
+    }
+    .article-h1 { display: none; }
+
+    /* リード文 */
+    .lead-p {
+      font-size: 1.08rem;
+      line-height: 1.9;
+      color: #4a3728;
+      background: linear-gradient(135deg, #fffaf4, #fdf4ea);
+      border-left: 4px solid #c98a4b;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin-bottom: 2em;
+    }
+
+    /* H2 見出し */
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #3d2b1a;
+      margin: 2.4em 0 0.75em;
+      padding: 8px 16px 8px 20px;
+      border-left: 5px solid #a0622a;
+      background: linear-gradient(90deg, #fdf4ec, #fdfaf6);
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    /* ヒントセクション H2 */
+    .hint-h2 {
+      background: linear-gradient(90deg, #edfaf0, #f4fdf6) !important;
+      border-left-color: #4caf78 !important;
+      color: #2d6b45 !important;
+    }
+
+    /* H3 見出し */
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #5a3e28;
+      margin: 1.8em 0 0.55em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3::before {
+      content: '▸';
+      color: #c98a4b;
+      font-size: 0.85em;
+    }
+
+    /* 段落 */
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1rem;
+      color: #3a2e25;
+    }
+
+    /* ヒント段落 */
+    .hint-p {
+      color: #3a2e25;
+    }
+
+    /* リスト */
+    ul {
+      margin: 0.6em 0 1.3em 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 0.55em;
+      font-size: 1rem;
+      padding-left: 1.6em;
+      position: relative;
+    }
+    li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.75em;
+      top: 0.2em;
+    }
+
+    /* ヒントリスト */
+    .hint-list {
+      background: linear-gradient(135deg, #f0faf4, #e8f7ed);
+      border: 1px solid #b8e4c8;
+      border-radius: 12px;
+      padding: 18px 22px 18px 24px;
+      margin: 0.6em 0 1.5em;
+    }
+    .hint-list li::before {
+      content: '✅';
+    }
+
+    strong { color: #5a3e28; font-weight: 700; }
+    em { font-style: italic; color: #7a5538; }
+    hr {
+      border: none;
+      border-top: 1px dashed #d4c4b0;
+      margin: 2.8em 0;
+    }
+    code {
+      background: #f4e8d1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.87em;
+      color: #7a3e10;
+    }
+
+    /* ── 出典ボックス ── */
+    .source-box {
+      background: #f4ede4;
+      border: 1px solid #d8c4ac;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.87rem !important;
+      color: #6b4e37 !important;
+      margin-top: 0.5em;
+      line-height: 1.75;
+    }
+
+    /* ── 戻るボタン ── */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6b4e37, #5a3e28);
+      color: #f4e8d1 !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 50px;
+      margin-top: 3em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(90,62,40,0.25);
+    }
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(90,62,40,0.32);
+      text-decoration: none !important;
+    }
+
+    /* ── フッター ── */
+    footer {
+      background: #3d2b1a;
+      color: #c4a882;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+    footer a { color: #e8c98a; text-decoration: underline; }
+    .cc-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.76rem;
+      margin-top: 10px;
+    }
+
+    /* ── レスポンシブ ── */
+    @media (max-width: 600px) {
+      .article-hero { padding: 44px 18px 38px; }
+      .article-body { padding: 36px 18px 64px; }
+      .lead-p { padding: 14px 16px; }
+      h2 { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">← 記事一覧に戻る</a>
+  <span class="site-name">🐰 うさぎ科学ニュース</span>
+</header>
+
+<div class="article-hero">
+  <div class="hero-icon-wrap">🐰</div>
+  <h1>うさぎのケージを豊かにするなら、わら か 圧縮木材ブロック！─オランダの実験結果</h1>
+  <div class="hero-meta">
+    <span class="hero-badge">📚 論文解説</span>
+    <span class="hero-wrs-badge">World Rabbit Science</span>
+  </div>
+</div>
+
+<article class="article-body">
+<h1 class="article-h1">うさぎのケージを豊かにするなら、わら か 圧縮木材ブロック！─オランダの実験結果</h1>
+<p class="lead-p">うさぎは歯をすり減らすために「かじる」ことが生理的に必要です。でも市販のケージの中では、かじれるものがほとんどない。では、何を入れてあげると一番喜ぶのでしょう？オランダで行われた行動実験が、意外にシンプルな答えを出しました。</p>
+<h2>なぜこの研究が面白いの？</h2>
+<p>ペットとして飼われているうさぎもそうですが、商業的な農場のうさぎも、ケージという限られた空間で暮らしています。自然界では、うさぎは木の枝や根をかじり、穴を掘り、探索行動をします。でも金属の格子しかないケージでは、そうした行動の出口がありません。</p>
+<p><strong>豊かさを与える環境刺激（エンリッチメント）</strong>——すなわち、かじれる材料などをケージに入れること——がうさぎの行動と福祉にどう影響するかを調べたのがこの研究です。対象は80頭の多産授乳中メスうさぎ（ハイコール系統）で、2回の授乳期（各6週）にわたって行動観察が行われました。</p>
+<h2>研究でわかったこと</h2>
+<h3>試したのは4種類の素材</h3>
+<ul>
+<li><strong>松の木スティック（Pine）</strong>：市販のもの、ケージ天井から吊るして提供</li>
+<li><strong>圧縮木材ブロック（Ply）</strong>：ミスカンサス（イネ科植物）から作った圧縮ブロック</li>
+<li><strong>わら（Straw）</strong>：プラスチック製の容器に入れて提供</li>
+<li><strong>わら＋松スティック（Straw+Pine）</strong>：組み合わせ</li>
+<li><strong>対照群（C）</strong>：何も入れない</li>
+</ul>
+<h3>うさぎはわらと圧縮木材が大好き</h3>
+<ul>
+<li>わら条件のうさぎが「エンリッチメントを使っている」割合：<strong>24%（時間比4%）</strong></li>
+<li>圧縮木材ブロック（Ply）：<strong>11%（時間比2%）</strong></li>
+<li>松のスティック：<strong>わずか4%（時間比0.1%）</strong></li>
+<li>わら＋松のスティックを同時に与えた場合、うさぎはほぼわらしか触らず、松は無視された</li>
+</ul>
+<h3>授乳4週目になるとさらに活発に使う</h3>
+<ul>
+<li>授乳4週目は他の週と比べて、エンリッチメントを使う時間・頭数が増加した</li>
+<li>ちょうどこの時期に巣箱が撤去され、子うさぎが巣から出てくるため、お母さんうさぎが台座に避難するようになり、そこにある素材をかじるようだった</li>
+</ul>
+<h3>2回の授乳期を通じて魅力が持続</h3>
+<ul>
+<li>わらと圧縮木材ブロックは、観察した10週間を通じて使われ続けた</li>
+<li>「すぐに飽きる」という心配は不要だった</li>
+</ul>
+<h3>異常行動は減少しなかったが……</h3>
+<ul>
+<li>ゲージをかじる・掘るなどの異常行動は処理間で有意差なし</li>
+<li>ただし異常行動は主に<strong>授乳2週目（巣箱が閉じられる時期）に集中</strong>しており、管理方法との関係が示唆された</li>
+</ul>
+<h2 class="hint-h2">🌿 うさぎとの暮らしに活かすには？</h2>
+<p class="hint-p">この研究の結果はペット飼育にも参考になります：</p>
+<ul class="hint-list">
+<li>うさぎのケージに<strong>わらや無塗装の木製かじり棒</strong>を入れることで、自然な採食・かじり行動を促せる可能性があります</li>
+<li>松の木スティックは吊るして提供するより、齧りやすい形で固定した方が使われやすいかもしれません</li>
+<li>自然素材は害虫や毒素（カビなど）のリスクがあるため、<strong>品質が保証されたものを選ぶ</strong>ことが重要です</li>
+<li>プレスウッドなどの加工品には化学物質が含まれる場合があるため、安全性を確認してから使用しましょう</li>
+<li>うさぎのかじり行動が異常に強い場合や歯の問題が疑われる場合は<strong>獣医師にご相談ください</strong></li>
+</ul>
+<h2>まとめ</h2>
+<p>わらと圧縮木材ブロックは、授乳中のうさぎに最もよく使われたエンリッチメント素材でした。松のスティックは吊るし方に問題がある可能性があり、単独では不十分かもしれません。うさぎの本来の行動ニーズを満たすために、シンプルな素材が大きな違いをもたらすことを示した研究です。</p>
+<hr>
+<p class="source-box">📄 <strong>出典</strong>: World Rabbit Science, Vol.22, No.4, 2014（pp. 301–309）</p>
+<p>Rommers J.M., Bracke M.B.M., Reuvekamp B., Gunnink H., de Jong I.C.</p>
+  <a href="../index.html" class="back-btn">← 記事一覧に戻る</a>
+</article>
+
+<footer>
+  <p><strong>うさぎ科学ニュース</strong> — World Rabbit Science 論文解説サイト</p>
+  <p style="margin-top:8px;">
+    原著論文：<a href="https://polipapers.upv.es/index.php/wrs" target="_blank" rel="noopener">World Rabbit Science</a>（Universitat Politècnica de València）
+  </p>
+  <div class="cc-badge">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#e8c98a;">
+      CC BY-NC-SA 4.0
+    </a>
+  </div>
+  <p style="margin-top:12px; font-size:0.75rem; color:#9a7860;">
+    非営利目的に限り、出典を明記した上での転載・改変・共有を許可します。
+  </p>
+</footer>
+
+</body>
+</html>
